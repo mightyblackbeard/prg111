@@ -1,12 +1,15 @@
 #include "Student.hpp"
+#include "UTILITIES.hpp"
 #include <iostream>
 
 
 
 Student::Student()
 {
+	m_id = 1;
 	m_capacity = 10;
 	m_grades = new float[m_capacity];
+	
 	m_num_grades = 0;
 }
 
@@ -17,47 +20,38 @@ Student::~Student()
 
 void Student::AddGrade(float grade)
 {
-	if (m_num_grades > m_capacity)
+	//std::cout << "num grades = " << m_num_grades << " - capacity = " << m_capacity << std::endl;
+	if (m_num_grades >= m_capacity)
 	{
-		IncreaseCap();	
+		ExtendIntArray(&m_grades, m_capacity);
+		m_capacity += 10;
 	}
 	
 	m_grades[m_num_grades] = grade;
 	m_num_grades++;
 }
 
+void Student::AddGrade(int numgrades)
+{
+	for (int i = 0; i < numgrades; i++)
+	{
+		AddGrade((float)i+1);
+	}
+}
+
 void Student::Debug()
 {
 	for (int i = 0; i < m_num_grades; i++)
 	{
-		std::cout << m_grades[i];
+		std::cout << m_grades[i] << "\n";
 	}
 }
 
-void Student::IncreaseCap()
+
+void Student::ClearGrades()
 {
-	std::cout << "increasing array size.....";
-
-	int oldcap = m_capacity;
-	
-	float* backup = new float[oldcap];
-	
-
-	for (int i = 0; i < oldcap; i++)
-	{
-		backup[i] = m_grades[i];
-	}
-
 	delete[] m_grades;
-	m_capacity += 10;
+	m_num_grades = 0;
+	m_capacity = 10;
 	m_grades = new float[m_capacity];
-
-	for (int i = 0; i < oldcap; i++)
-	{
-		m_grades[i] = backup[i];
-	}
-
-	delete[] backup;
-
-	std::cout << "array size now " + m_capacity;
 }

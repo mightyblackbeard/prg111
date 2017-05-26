@@ -1,7 +1,5 @@
-﻿  Student.cpp
-c:\users\ccsduser\documents\visual studio 2017\projects\consoleapplication1\consoleapplication1\student.hpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  ConsoleApplication1.vcxproj -> c:\users\ccsduser\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.exe
-  ConsoleApplication1.vcxproj -> c:\users\ccsduser\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Partial PDB)
+﻿  main.cpp
+c:\users\ccsduser\documents\visual studio 2017\projects\consoleapplication1\consoleapplication1\student.hpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\ccsduser\documents\visual studio 2017\projects\consoleapplication1\consoleapplication1\main.cpp(11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  ConsoleApplication1.vcxproj -> C:\Users\CCSDuser\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> C:\Users\CCSDuser\documents\visual studio 2017\Projects\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Partial PDB)

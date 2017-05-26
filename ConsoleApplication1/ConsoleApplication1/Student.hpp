@@ -1,4 +1,3 @@
-#pragma once
 #ifndef STUDENT_HPP
 #define	STUDENT_HPP
 
@@ -20,8 +19,9 @@ public:
 	~Student();
 
 	void AddGrade(float grade);
+	void AddGrade(int numgrades);
 	void Debug();
-	void IncreaseCap();
+	void ClearGrades();
 };
 
 #endif
